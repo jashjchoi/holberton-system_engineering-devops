@@ -1,7 +1,6 @@
 ## 0x01. Shell, Permissions
----
-#### 1.Symbolic Mode
-------
+
+#### Symbolic Mode
 
 ```$ chmod [references][operator][modes] file ...```
 
@@ -31,7 +30,7 @@
 | `x` | Execute | Execute or recurse a directory tree |
 
 
-2. Numerical permissions
+#### Numerical permissions
 
 | Number | Permission | rwx | Binary |
 | --- | --- | --- | --- |
@@ -45,8 +44,7 @@
 | 0 | None | --- | 000 |
 
 - For example, `754` would allow:
-
-  -"read" (4), "write" (2), and "execute" (1) for the user class, as the binary value of 7 (4+2+1) is 111.
-  -"read" (4) and "execute" (1) for the Group class, as the binary value of 5 (4+1) is 101.
+  - "read" (4), "write" (2), and "execute" (1) for the user class, as the binary value of 7 (4+2+1) is 111.
+  - "read" (4) and "execute" (1) for the Group class, as the binary value of 5 (4+1) is 101.
 Only "read" (4) for the Others class, as the binary value of 4 (4) is 100.
 
