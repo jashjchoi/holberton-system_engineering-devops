@@ -1,8 +1,6 @@
-### 0x01. Shell, Permissions
+## 0x01. Shell, Permissions
 ---
-
-
-1. Symbolic Mode
+#### 1.Symbolic Mode
 ------
 
 ```$ chmod [references][operator][modes] file ...```
