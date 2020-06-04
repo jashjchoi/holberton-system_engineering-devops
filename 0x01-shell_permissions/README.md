@@ -1,6 +1,6 @@
-## 0x01. Shell, Permissions
+# 0x01. Shell, Permissions
 
-:sparkles: Symbolic Mode
+:sparkles: **Symbolic Mode**
 
 ```$ chmod [references][operator][modes] file ...```
 
@@ -30,7 +30,7 @@
 | `x` | Execute | Execute or recurse a directory tree |
 
 
-:sparkles: Numerical permissions
+:sparkles: **Numerical permissions**
 
 | Number | Permission | rwx | Binary |
 | --- | --- | --- | --- |
