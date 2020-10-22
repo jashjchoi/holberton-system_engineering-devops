@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Displays the content of current directory in a list format
+# Must use for loop (not allowed to use while and until)
+
+LS="$(ls)"
+for f in $LS
+do
+    echo "$f" | cut -d - -f2
+done
