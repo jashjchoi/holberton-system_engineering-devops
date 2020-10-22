@@ -1,18 +1,18 @@
 #!/usr/bin/env bash
-# displays numbers from 1 to 100; Fizzbuzz
+# Displays numbers from 1 to 100 in a list format; Fizzbuzz
 
 for num in {1..100}
 do
-    if (( num % 3 == 0 && num % 5 == 0 ))
+    if [ $((num % 5)) -eq 0 -a $((num % 3)) -eq 0 ]
     then
-        echo "Fizzbuzz"
-    elif (( num % 3 == 0 ))
+	    echo "FizzBuzz"
+    elif [ $((num % 3)) -eq 0 ]
     then
-        echo "Fizz"
-    elif (( num % 5 == 0))
+	    echo "Fizz"
+    elif [ $((num % 5)) -eq 0 ]
     then
-        echo "Buzz"
+	    echo "Buzz"
     else
-        echo "$num"
+	    echo "$num"
     fi
 done
