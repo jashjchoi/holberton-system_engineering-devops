@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# TCP UDP listening ports; PID and name of program
+netstat -lp
