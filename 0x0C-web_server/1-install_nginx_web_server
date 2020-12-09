@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # install nginx to create html file
-sudo apt-get -y update
-sudo apt-get -y install nginx
-sudo echo "Holberton School" > /var/www/html/index.nginx-debian.html
+apt-get -y update
+apt-get -y install nginx
+echo "Holberton School" > /var/www/html/index.html
 sudo service nginx restart
