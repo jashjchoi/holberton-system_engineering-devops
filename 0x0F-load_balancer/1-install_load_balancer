@@ -11,6 +11,7 @@ frontend web_servers_frontend
 \tdefault_backend web_servers_backend
 
 backend web_servers_backend
+\tmode http
 \tbalance roundrobin
 \toption forwardfor
 \thttp-request set-header X-Forwarded-Port %[dst_port]
