@@ -5,12 +5,12 @@ sudo apt-get -y update
 sudo apt-get -y install haproxy=1.8.\*
 
 sudo echo -e "
-frontend web_servers_frontend
+frontend web_frontend
 \tmode http
 \tbind *:80
-\tdefault_backend web_servers_backend
+\tdefault_backend web_backend
 
-backend web_servers_backend
+backend web_backend
 \tmode http
 \tbalance roundrobin
 \toption forwardfor
