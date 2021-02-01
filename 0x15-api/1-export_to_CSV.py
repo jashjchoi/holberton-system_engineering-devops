@@ -3,25 +3,26 @@
     Uses the fake API for a given employee ID
     export data in the CSV format
 """
-import requests
+from requests import get
 from sys import argv
 import csv
 
-if __name__ == "__main__":
-    """display the list of username and tasks in csv file"""
-    USER_ID = argv[1]
-    FILE_NAME = USER_ID + '.csv'
-    url_emp = 'https://jsonplaceholder.typicode.com/users/{}'\
-        .format(int(USER_ID))
-    EMPLOYEE_NAME = requests.get(url_emp).json()
-    url_todos = ("https://jsonplaceholder.typicode.com/todos")
-    req_todos = requests.get(url_todos).json()
+
+if __name__ == '__main__':
+    url_user = 'https://jsonplaceholder.typicode.com/users/' + argv[1]
+    url_todos = 'https://jsonplaceholder.typicode.com/todos?userId=' + argv[1]
+    names = get(url_user).json()
+    todos = get(url_todos)
+    FILE_NAME = "{}.csv".format(argv[1])
+
     with open(FILE_NAME, mode='w+', newline='') as csv_file:
         c_writer = csv.writer(csv_file, delimiter=',', quotechar='"',
                               quoting=csv.QUOTE_ALL)
-        for todo in req_todos:
-            if todo.get('userId') == int(USER_ID):
-                c_writer.writerow([todo.get("userId"),
-                                   EMPLOYEE_NAME.get("username"),
-                                   todo.get("completed"),
-                                   todo.get("title")])
+        TASK_LIST = []
+        for todo in todos.json():
+            TASK_LIST.append(names.get("id"))
+            TASK_LIST.append(names.get("username"))
+            TASK_LIST.append(todo.get("completed"))
+            TASK_LIST.append(todo.get("title"))
+            c_writer.writerow(TASK_LIST)
+            TASK_LIST = []
