@@ -9,8 +9,9 @@ import csv
 
 
 if __name__ == '__main__':
-    url_user = 'https://jsonplaceholder.typicode.com/users/' + argv[1]
-    url_todos = 'https://jsonplaceholder.typicode.com/todos?userId=' + argv[1]
+    id_emp = argv[1]
+    url_user = 'https://jsonplaceholder.typicode.com/users/' + id_emp
+    url_todos = 'https://jsonplaceholder.typicode.com/todos?userId=' + id_emp
     names = get(url_user).json()
     todos = get(url_todos)
     FILE_NAME = "{}.csv".format(argv[1])
