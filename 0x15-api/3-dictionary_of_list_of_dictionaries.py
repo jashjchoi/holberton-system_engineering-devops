@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-    Uses the fake API for a given employee ID
-    export data as JSON
+    Uses the fake API to export all data as JSON
 """
 from requests import get
 from sys import argv
