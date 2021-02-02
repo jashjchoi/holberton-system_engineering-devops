@@ -12,7 +12,7 @@ if __name__ == '__main__':
     for usr in req_user:
         id_emp = usr["id"]
         req_todos = get('https://jsonplaceholder.typicode.com/todos?userId={}'
-            .format(id_emp)).json()
+                        .format(id_emp)).json()
         ALL_LIST = []
         for todo in req_todos:
             dict_task = {}
