@@ -8,14 +8,13 @@ from sys import argv
 
 
 def top_ten(subreddit):
-    """If not a valid subreddit, print None"""
     url = 'https://www.reddit.com/r/' + subreddit + '/hot.json'
-    limit = {'limit': 10}
+    params = {'limit': 10}
     headers = {'user-agent': 'request'}
     try:
         response = requests.get(url,
                                 headers=headers,
-                                limit=limit,
+                                params=params,
                                 allow_redirects=False).json()
         data = response['data']['children']
         for post in data:
