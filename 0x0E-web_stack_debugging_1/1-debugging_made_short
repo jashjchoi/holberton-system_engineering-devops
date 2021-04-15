@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Debug the server and open the 80 port
-sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-sudo service nginx restart
+perl -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+service nginx start
 sudo pkill -1 nginx
