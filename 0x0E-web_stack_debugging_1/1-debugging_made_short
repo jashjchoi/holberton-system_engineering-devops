@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # Debug the server and open the 80 port
-ln -fs /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
-sudo rm /run/nginx.pid
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+sudo service nginx restart
+sudo pkill -1 nginx
