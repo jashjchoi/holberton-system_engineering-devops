@@ -2,4 +2,4 @@
 # Debug the server and open the 80 port
 ln -fs /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default 
 sudo service nginx restart 
-sudo pkill nginx
+sudo pkill -1 nginx
